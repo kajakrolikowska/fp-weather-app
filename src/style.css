@@ -8,24 +8,24 @@ ul {
 li {
   list-style-type: none;
 }
-
-h1.city {
+#city {
   color: #1c7ecb;
   text-align: right;
   font-size: 28px;
 }
-h1.temperature {
+#temperature {
   color: #e10000;
   font-size: 28px;
-  text-align: center;
+  text-align: right;
 }
-
-.units {
+#units {
   color: #e10000;
   font-size: 15px;
-  text-align: center;
-  position: relative;
-  top: -10px;
+  text-align: left;
+}
+
+.pad {
+  padding: 0;
 }
 .weather-app-wrap {
   max-width: 700px;

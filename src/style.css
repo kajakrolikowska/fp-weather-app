@@ -8,6 +8,10 @@ ul {
 li {
   list-style-type: none;
 }
+
+p {
+  color: #5a6275;
+}
 #city {
   color: #1c7ecb;
   text-align: right;

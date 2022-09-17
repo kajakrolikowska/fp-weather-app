@@ -41,6 +41,7 @@ function displayCurrentConditions(response) {
   let currentWind = document.querySelector("#wind");
   let currentHumidity = document.querySelector("#humidity");
   let locationDate = document.querySelector("#local-date");
+  let weatherIcon = document.querySelector("#icon");
 
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   currentCity.innerHTML = response.data.name;
@@ -48,10 +49,14 @@ function displayCurrentConditions(response) {
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   currentHumidity.innerHTML = response.data.main.humidity;
   locationDate.innerHTML = formatDate(response.data.dt * 1000);
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "8ade40df9cf169461fc7f8acab2e9ac0";
-let city = "Sydney";
+let city = "Warsaw";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 console.log(apiUrl);

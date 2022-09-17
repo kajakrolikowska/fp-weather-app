@@ -20,11 +20,26 @@
   </head>
   <body>
     <div class="container">
-      <img src="" id="icon">
+    <img src="" id="icon">
       <div class="weather-app-wrap">
       <div class="weather-app">
         <p><span id="local-date"></span></p>
         <br />
+        <form id="city-search">
+            <div class="row">
+              <div class="mb-3 col-7">
+                <input
+                  id="city-input"
+                  type="text"
+                  class="form-control"
+                  placeholder=" 🔍 What is the weather in...?"
+                />
+                <button type="submit" class="check">Check</button>
+                <button type="button" class="location">Current location</button>
+              </div>
+            </div>
+          </form>
+
         <div class="row current-weather">
         <div class="col-6 pad"><h1 id="city"></h1></div>
         <div class="col-2 pad"><h1 id="temperature"></h1></div>

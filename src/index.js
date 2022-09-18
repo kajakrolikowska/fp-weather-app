@@ -97,16 +97,27 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("submit", handleSubmit);
 
-function displayFarenheitTemperature(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
-  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  currentTemperature.innerHTML = Math.round(farenheitTemperature);
-  console.log(farenheitTemperature);
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let farenheitTemperatureLink = document.querySelector("#farenheit");
-farenheitTemperatureLink.addEventListener("click", displayFarenheitTemperature);
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#temperature");
+  currentTemperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let fahrenheitTemperatureLink = document.querySelector("#fahrenheit");
+fahrenheitTemperatureLink.addEventListener(
+  "click",
+  displayFahrenheitTemperature
+);
+
+let celciusTemperatureLink = document.querySelector("#celcius");
+celciusTemperatureLink.addEventListener("click", displayCelciusTemperature);
 
 let celciusTemperature = null;
 getName("Berlin");

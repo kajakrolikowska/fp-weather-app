@@ -48,7 +48,9 @@ function displayCurrentConditions(response) {
   let weatherIcon = document.querySelector("#icon");
   let locationTime = document.querySelector("#local-time");
 
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  celciusTemperature = response.data.main.temp;
+
+  currentTemperature.innerHTML = Math.round(celciusTemperature);
   currentCity.innerHTML = response.data.name;
   currentConditions.innerHTML = response.data.weather[0].description;
   currentWind.innerHTML = Math.round(response.data.wind.speed);
@@ -95,4 +97,16 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("submit", handleSubmit);
 
+function displayFarenheitTemperature(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#temperature");
+  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  currentTemperature.innerHTML = Math.round(farenheitTemperature);
+  console.log(farenheitTemperature);
+}
+
+let farenheitTemperatureLink = document.querySelector("#farenheit");
+farenheitTemperatureLink.addEventListener("click", displayFarenheitTemperature);
+
+let celciusTemperature = null;
 getName("Berlin");

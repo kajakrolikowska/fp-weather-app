@@ -1,8 +1,5 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let hours = String(date.getHours()).padStart(2, "0");
-  let minutes = String(date.getMinutes()).padStart(2, "0");
-
   let num = date.getDate();
   let months = [
     "January",
@@ -30,7 +27,14 @@ function formatDate(timestamp) {
   ];
   let day = days[date.getDay()];
   let year = date.getFullYear();
-  return `${day}, ${num} ${month} ${year} <br /> ${hours}:${minutes}`;
+  return `${day}, ${num} ${month} ${year}`;
+}
+function formatTime() {
+  let now = new Date();
+  let hours = String(now.getHours()).padStart(2, "0");
+  let minutes = String(now.getMinutes()).padStart(2, "0");
+
+  return `${hours}:${minutes}`;
 }
 
 function displayCurrentConditions(response) {
@@ -42,6 +46,7 @@ function displayCurrentConditions(response) {
   let currentHumidity = document.querySelector("#humidity");
   let locationDate = document.querySelector("#local-date");
   let weatherIcon = document.querySelector("#icon");
+  let locationTime = document.querySelector("#local-time");
 
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   currentCity.innerHTML = response.data.name;
@@ -53,6 +58,7 @@ function displayCurrentConditions(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  locationTime.innerHTML = formatTime();
 }
 
 //(1) current location:

@@ -14,12 +14,10 @@ p {
   line-height: 1;
 }
 
-#celcius,
-#fahrenheit {
+a {
   color: #e10000;
   text-decoration: none;
 }
-
 #city {
   color: #1c7ecb;
   text-align: right;
@@ -126,4 +124,11 @@ p {
 .location:hover {
   background: white;
   color: #ced4d9;
+}
+
+.active {
+  color: #e10000;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }

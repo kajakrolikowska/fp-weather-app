@@ -13,6 +13,13 @@ p {
   color: #5a6275;
   line-height: 1;
 }
+
+#celcius,
+#farenheit {
+  color: #e10000;
+  text-decoration: none;
+}
+
 #city {
   color: #1c7ecb;
   text-align: right;
@@ -53,10 +60,6 @@ p {
 }
 .forecast:first-child {
   border-left: none;
-}
-.change-to-F {
-  text-align: right;
-  color: #1ab;
 }
 
 .conditions {

@@ -37,6 +37,23 @@ function formatTime() {
   return `${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  forecastElement = document.querySelector("#forecasts");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 forecast">
+          <div class="forecast-day">${day}</div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" class="weather-icon" width=40>
+          <div class="forecast-temp-max-min"><span class="temperature-max">18&#176C</span> | <span class="temperature-min">12&#176C</span></div>
+        </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayCurrentConditions(response) {
   console.log(response.data);
   let currentTemperature = document.querySelector("#temperature");
@@ -126,4 +143,6 @@ let celciusTemperatureLink = document.querySelector("#celcius");
 celciusTemperatureLink.addEventListener("click", displayCelciusTemperature);
 
 let celciusTemperature = null;
+
+displayForecast();
 getName("Berlin");

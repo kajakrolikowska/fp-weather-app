@@ -20,14 +20,14 @@
   </head>
   <body>
     <div class="container">
-    <img src="" id="icon">
+    
       <div class="weather-app-wrap">
       <div class="weather-app">
         <p><span id="local-date"></span></p>
         <p><span id="local-time"></span></p>
         <br />
         <form id="city-search">
-            <div class="row">
+            <div class="row search-eng">
               <div class="mb-3 col-7">
                 <input
                   id="city-input"
@@ -42,10 +42,11 @@
           </form>
 
         <div class="row current-weather">
-        <div class="col pad"><h1 id="city"></h1></div>
-        <div class="col pad"><h1 id="temperature"></h1></div>
-        <div class="col"><h2 id="units"><a href="#" id="celcius" class="active">&#176C</a> | <a href="#" id="fahrenheit">&#176F</a></h2></div>
-      
+        <div class="col-4 pad"><h1 id="city"></h1></div>
+        <div class="col-3 pad"><h1 id="temperature"></h1></div>
+        <div class="col-2"><h2 id="units"><a href="#" id="celcius" class="active">&#176C</a> | <a href="#" id="fahrenheit">&#176F</a></h2></div>
+        <div class="col-2"><img src="" id="icon"></div>
+        <div class="col-1"></div>
         </div>
         <br />
         <div class="row conditions">

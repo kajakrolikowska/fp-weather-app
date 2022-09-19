@@ -22,16 +22,19 @@ a {
   color: #1c7ecb;
   text-align: right;
   font-size: 28px;
+  line-height: 3;
 }
 #temperature {
   color: #e10000;
   font-size: 28px;
   text-align: right;
+  line-height: 3;
 }
 #units {
   color: #e10000;
   font-size: 15px;
   text-align: left;
+  line-height: 5;
 }
 
 .pad {
@@ -76,12 +79,6 @@ a {
 }
 #description:first-letter {
   text-transform: uppercase;
-}
-
-#icon {
-  position: relative;
-  top: 291px;
-  right: -830px;
 }
 
 .check {
@@ -133,10 +130,6 @@ a {
   cursor: pointer;
 }
 
-.col-2 .forecast {
-  text-align: center;
-}
-
 .forecast-day {
   font-size: 16px;
   color: #5a6275;
@@ -145,4 +138,12 @@ a {
 .forecast-temp-max-min {
   font-size: 14px;
   color: #e10000;
+}
+
+#icon {
+  width: 90px;
+}
+
+.search-eng {
+  max-height: 45px;
 }

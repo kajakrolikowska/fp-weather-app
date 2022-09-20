@@ -38,7 +38,7 @@ function formatTime() {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
+  console.log(response.data.daily);
   forecastElement = document.querySelector("#forecasts");
   let forecastHTML = `<div class="row">`;
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];

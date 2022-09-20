@@ -47,7 +47,7 @@ function displayForecast(response) {
       forecastHTML +
       `<div class="col forecast">
           <div class="forecast-day">${day}</div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" class="weather-icon" width=40>
+          <img src="https://openweathermap.org/img/wn/10d@2x.png" class="weather-icon" width=40>
           <div class="forecast-temp-max-min"><span class="temperature-max">18&#176C</span> | <span class="temperature-min">12&#176C</span></div>
         </div>`;
   });
@@ -83,7 +83,7 @@ function displayCurrentConditions(response) {
   locationDate.innerHTML = formatDate(response.data.dt * 1000);
   weatherIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   locationTime.innerHTML = formatTime();
 

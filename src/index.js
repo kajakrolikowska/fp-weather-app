@@ -37,7 +37,8 @@ function formatTime() {
   return `${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   forecastElement = document.querySelector("#forecasts");
   let forecastHTML = `<div class="row">`;
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -52,6 +53,13 @@ function displayForecast() {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "0a521eaf234a3a56f45252fac3c737ad";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayCurrentConditions(response) {
@@ -78,6 +86,8 @@ function displayCurrentConditions(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   locationTime.innerHTML = formatTime();
+
+  getForecast(response.data.coord);
 }
 
 //(1) current location:
@@ -144,5 +154,4 @@ celciusTemperatureLink.addEventListener("click", displayCelciusTemperature);
 
 let celciusTemperature = null;
 
-displayForecast();
 getName("Berlin");

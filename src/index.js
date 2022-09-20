@@ -38,17 +38,23 @@ function formatTime() {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
-  forecastElement = document.querySelector("#forecasts");
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecasts");
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
+  console.log(response.data.daily);
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `<div class="col forecast">
-          <div class="forecast-day">${day}</div>
-          <img src="https://openweathermap.org/img/wn/10d@2x.png" class="weather-icon" width=40>
-          <div class="forecast-temp-max-min"><span class="temperature-max">18&#176C</span> | <span class="temperature-min">12&#176C</span></div>
+          <div class="forecast-day">${forecastDay.dt}</div>
+          <img src="https://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png" class="weather-icon" width=40>
+          <div class="forecast-temp-max-min"><span class="temperature-max">${Math.round(
+            forecastDay.temp.max
+          )}&#176C</span> | <span class="temperature-min">${Math.round(
+        forecastDay.temp.min
+      )}&#176C</span></div>
         </div>`;
   });
   forecastHTML = forecastHTML + `</div>`;

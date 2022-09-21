@@ -49,7 +49,6 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecasts");
   let forecastHTML = `<div class="row">`;
-  console.log(response.data.daily);
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -76,12 +75,10 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "0a521eaf234a3a56f45252fac3c737ad";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function displayCurrentConditions(response) {
-  console.log(response.data);
   let currentTemperature = document.querySelector("#temperature");
   let currentCity = document.querySelector("#city");
   let currentConditions = document.querySelector("#description");

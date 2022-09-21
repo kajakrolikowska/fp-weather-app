@@ -62,9 +62,9 @@ function displayForecast(response) {
           }@2x.png" class="weather-icon" width=40>
           <div class="forecast-temp-max-min"><span class="temperature-max">${Math.round(
             forecastDay.temp.max
-          )}&#176C</span> | <span class="temperature-min">${Math.round(
+          )}&#176</span> | <span class="temperature-min">${Math.round(
           forecastDay.temp.min
-        )}&#176C</span></div>
+        )}&#176</span></div>
         </div>`;
     }
   });
@@ -142,34 +142,5 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("submit", handleSubmit);
 
-//dispaly temperature
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  celciusTemperatureLink.classList.remove("active");
-  fahrenheitTemperatureLink.classList.add("active");
-  let currentTemperature = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelciusTemperature(event) {
-  event.preventDefault();
-  celciusTemperatureLink.classList.add("active");
-  fahrenheitTemperatureLink.classList.remove("active");
-  let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = Math.round(celciusTemperature);
-}
-
-let fahrenheitTemperatureLink = document.querySelector("#fahrenheit");
-fahrenheitTemperatureLink.addEventListener(
-  "click",
-  displayFahrenheitTemperature
-);
-
-let celciusTemperatureLink = document.querySelector("#celcius");
-celciusTemperatureLink.addEventListener("click", displayCelciusTemperature);
-
 let celciusTemperature = null;
-
 getName("Berlin");

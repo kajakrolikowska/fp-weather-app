@@ -41,12 +41,12 @@ a {
   padding: 0;
 }
 .weather-app-wrap {
-  max-width: 700px;
+  max-width: 600px;
   display: block;
   margin: 0 auto;
 }
 .weather-app {
-  max-width: 700px;
+  max-width: 600px;
   padding: 20px;
   border: 1px solid #ced4d9;
   border-radius: 10px;

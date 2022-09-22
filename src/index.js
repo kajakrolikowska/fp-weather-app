@@ -87,6 +87,7 @@ function displayCurrentConditions(response) {
   let locationDate = document.querySelector("#local-date");
   let weatherIcon = document.querySelector("#icon");
   let locationTime = document.querySelector("#local-time");
+  let feelsLike = document.querySelector("#feels-like");
 
   celciusTemperature = response.data.main.temp;
 
@@ -101,6 +102,7 @@ function displayCurrentConditions(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   locationTime.innerHTML = formatTime();
+  feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)}&#176C`;
 
   getForecast(response.data.coord);
 }

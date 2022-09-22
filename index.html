@@ -28,29 +28,31 @@
         <br />
         <form id="city-search">
             <div class="row search-eng">
-              <div class="mb-3 col-7">
+              <div class="col-8">
                 <input
                   id="city-input"
                   type="text"
                   class="form-control"
                   placeholder=" 🔍 What is the weather in...?"
                 />
-                <button type="submit" class="check">Check</button>
-                <button type="button" class="location">Current location</button>
               </div>
+              <div class="col-2"><button type="submit" class="check col">Check</button></div>
+              <div class="col-2"><button type="button" class="location">📍</button></div>
             </div>
           </form>
 
         <div class="row current-weather">
         <div class="col-4 pad"><h1 id="city"></h1></div>
+        
         <div class="col-3 pad"><h1 id="temperature"></h1></div>
+        
         <div class="col-2"><h2 id="units">&#176C</h2></div>
-        <div class="col-2"><img src="" id="icon"></div>
+       <div class="col-2"><img src="" id="icon"></div>
         <div class="col-1"></div>
         </div>
         <br />
         <div class="row conditions">
-        <div class="col-9">
+        <div class="col">
           <ul>
             <li>Conditions</li>
             <li>Wind</li>

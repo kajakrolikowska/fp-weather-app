@@ -19,63 +19,64 @@
     <title>Kaja Final Project Weather App</title>
   </head>
   <body>
-    <div class="container">
     
-      <div class="weather-app-wrap">
-      <div class="weather-app">
-        <p><span id="local-date"></span></p>
-        <p><span id="local-time"></span></p>
-        <br />
-        <form id="city-search">
-            <div class="row search-eng">
-              <div class="col-8">
-                <input
-                  id="city-input"
-                  type="text"
-                  class="form-control"
-                  placeholder=" 🔍 What is the weather in...?"
-                />
-              </div>
-              <div class="col-2"><button type="submit" class="check col">Check</button></div>
-              <div class="col-2"><button type="button" class="location">📍</button></div>
+    
+    <div class="container">
+    <div class="weather-app-wrap">
+    <div class="weather-app">
+      <p><span id="local-date"></span></p>
+      <p><span id="local-time"></span></p>
+      <br />
+      <form id="city-search">
+        <div class="row search-eng">
+          <div class="col-8">
+            <input
+              id="city-input"
+              type="text"
+              class="form-control"
+              placeholder=" 🔍 What is the weather in...?"
+            />
+          </div>
+            <div class="col-2"><button type="submit" class="check col">Check</button></div>
+            <div class="col"><button type="button" class="location">📍</button></div>
+          </div>
+      </form>
+      <br />
+          <div class="row current-weather">
+            <div class="col-8"><h1 id="city"></h1></div>
+            <div class="col-2 pad"><h1 id="temperature"></h1></div>
+            <div class="col-2 pad"><h2 id="units">&#176C</h2></div>
+            <div class="col"></div>
+          </div>
+      <br />
+          <div class="row conditions">
+            <div class="col image"><img src="" id="icon"></div>
+            <div class="col">
+              <ul>
+                <li>Feels like</li>
+                <li>Conditions</li>
+                <li>Wind</li>
+                <li>Humidity</li>
+              </ul>
             </div>
-          </form>
-<br />
-        <div class="row current-weather">
-        <div class="col-8"><h1 id="city"></h1></div>
-        <div class="col-2 pad"><h1 id="temperature"></h1></div>
-        <div class="col-1 pad"><h2 id="units">&#176C</h2></div>
-        <div class="col"></div>
-        </div>
-        <br />
-        <div class="row conditions">
-        
-        <div class="col"><img src="" id="icon"></div>
-        <div class="col">
-          <ul>
-            <li>Feels like</li>
-            <li>Conditions</li>
-            <li>Wind</li>
-            <li>Humidity</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul class="values">
-            <li><span id="feels-like"></span></li>
-            <li><span id="description"></span></li>
-            <li><span id="wind"></span> km/h</li>
-            <li><span id="humidity"></span> %</li>
-          </ul>
-        </div>
-        </div>
-        <hr />
-        <div id="forecasts">
-        </div>
-        <hr />
-      </div>
-      <small><a href="https://github.com/kajakrolikowska/fp-weather-app">Open-source code</a>, by Kaja Królikowska</small>
+            <div class="col">
+              <ul class="values">
+                <li><span id="feels-like"></span></li>
+                <li><span id="description"></span></li>
+                <li><span id="wind"></span> km/h</li>
+                <li><span id="humidity"></span> %</li>
+              </ul>
+            </div>
+          </div>
+      <hr />
+          <div id="forecasts"></div>
+      <hr />
+    </div>
+    <small><a href="https://github.com/kajakrolikowska/fp-weather-app">Open-source code</a>, by Kaja Królikowska</small>
     </div>
     </div>
+    
+    
     <script src="src/index.js"></script>
   </body>
 </html>

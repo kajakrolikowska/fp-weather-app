@@ -24,6 +24,7 @@ a {
 .form-control::placeholder {
   color: #411530;
   opacity: 1;
+  font-size: 12px;
 }
 
 .form-control {

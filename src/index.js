@@ -94,6 +94,7 @@ function displayCurrentConditions(response) {
   currentTemperature.innerHTML = Math.round(celciusTemperature);
   currentCity.innerHTML = response.data.name;
   currentConditions.innerHTML = response.data.weather[0].description;
+  //currentConditions.innerHTML = "thunderstorm with heavy drizzle"; //LONGEST DESCRIPTION FOR TESTS
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   currentHumidity.innerHTML = response.data.main.humidity;
   locationDate.innerHTML = formatDate(response.data.dt * 1000);
@@ -142,4 +143,4 @@ let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("submit", handleSubmit);
 
 let celciusTemperature = null;
-getName("Berlin");
+getName("Tokyo");

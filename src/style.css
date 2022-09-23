@@ -3,10 +3,12 @@ body {
 }
 ul {
   margin: 0;
-  padding: 0;
+  padding: 5px;
 }
 li {
   list-style-type: none;
+  color: #aa0000;
+  font-size: 12px;
 }
 
 p {
@@ -15,7 +17,7 @@ p {
 }
 
 a {
-  color: #e10000;
+  color: #aa0000;
   text-decoration: none;
 }
 .form-control {
@@ -28,12 +30,12 @@ a {
   font-size: 28px;
 }
 #temperature {
-  color: #e10000;
+  color: #aa0000;
   font-size: 28px;
   text-align: right;
 }
 #units {
-  color: #e10000;
+  color: #aa0000;
   font-size: 15px;
   text-align: left;
 }
@@ -63,31 +65,24 @@ a {
 .forecast:first-child {
   border-left: none;
 }
-
 .conditions {
-  color: #5a6275;
+  color: #ced4d9;
   font-size: 15px;
   text-align: right;
 }
 .values {
   text-align: left;
-  padding: 0 7px;
-  border-left: 1px solid #5a6275;
+  padding: 5px;
 }
-
-#description {
-  display: inline-block;
-}
-#description:first-letter {
-  text-transform: uppercase;
+.definitions {
+  border-right: 1px solid #ced4d9;
 }
 
 .check {
-  /*padding: 5px 10px;*/
   border-radius: 8px;
   border: 1px solid #ced4d9;
   color: white;
-  font-size: 12px;
+  font-size: 13px;
   background: #ced4d9;
 
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
@@ -101,11 +96,10 @@ a {
 }
 
 .location {
-  /*padding: 5px 10px;*/
   border-radius: 8px;
   border: 1px solid #ced4d9;
   color: white;
-  font-size: 12px;
+  font-size: 13px;
   background: #ced4d9;
 
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
@@ -119,7 +113,7 @@ a {
 }
 
 .active {
-  color: #e10000;
+  color: #aa0000;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
@@ -132,7 +126,7 @@ a {
 
 .forecast-temp-max-min {
   font-size: 10px;
-  color: #e10000;
+  color: #aa0000;
 }
 
 #icon {
@@ -145,4 +139,17 @@ a {
 
 .search-eng {
   max-height: 45px;
+}
+.temperature-min {
+  color: #aa000090;
+}
+#description {
+  display: block;
+  text-align: right;
+  color: #aa000090;
+  font-size: 12px;
+  padding: 0;
+}
+#description:first-letter {
+  text-transform: uppercase;
 }

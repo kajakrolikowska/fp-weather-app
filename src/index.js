@@ -146,4 +146,4 @@ let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("submit", handleSubmit);
 
 let celciusTemperature = null;
-getName("Tokyo");
+getName("Berlin");

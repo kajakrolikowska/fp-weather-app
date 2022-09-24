@@ -49,6 +49,9 @@ a {
   text-align: left;
 }
 
+#min-max {
+  color: red;
+}
 .pad {
   padding: 0;
 }

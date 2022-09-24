@@ -88,6 +88,8 @@ function displayCurrentConditions(response) {
   let weatherIcon = document.querySelector("#icon");
   let locationTime = document.querySelector("#local-time");
   let feelsLike = document.querySelector("#feels-like");
+  let currentMax = document.querySelector("#max");
+  let currentMin = document.querySelector("#min");
 
   celciusTemperature = response.data.main.temp;
 
@@ -104,7 +106,8 @@ function displayCurrentConditions(response) {
   );
   locationTime.innerHTML = formatTime();
   feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)}&#176C`;
-
+  currentMax.innerHTML = `${Math.round(response.data.main.temp_max)}&#176C`;
+  currentMin.innerHTML = `${Math.round(response.data.main.temp_min)}&#176C`;
   getForecast(response.data.coord);
 }
 

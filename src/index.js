@@ -90,6 +90,7 @@ function displayCurrentConditions(response) {
   let feelsLike = document.querySelector("#feels-like");
   let currentMax = document.querySelector("#max");
   let currentMin = document.querySelector("#min");
+  let currentPressure = document.querySelector("#pressure");
 
   celciusTemperature = response.data.main.temp;
 
@@ -108,6 +109,7 @@ function displayCurrentConditions(response) {
   feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)}&#176C`;
   currentMax.innerHTML = `${Math.round(response.data.main.temp_max)}&#176C`;
   currentMin.innerHTML = `${Math.round(response.data.main.temp_min)}&#176C`;
+  currentPressure.innerHTML = `${response.data.main.pressure} hPa`;
   getForecast(response.data.coord);
 }
 

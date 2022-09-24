@@ -1,5 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
+  color: #41153082;
 }
 ul {
   margin: 0;
@@ -7,13 +8,14 @@ ul {
 }
 li {
   list-style-type: none;
-  color: #d36b00;
+  color: #411530;
   font-size: 12px;
 }
 
 p {
-  color: #411530;
-  line-height: 1;
+  color: #41153082;
+  line-height: 0.5;
+  font-size: 14px;
 }
 
 a {
@@ -22,7 +24,7 @@ a {
 }
 
 .form-control::placeholder {
-  color: #411530;
+  color: #d36900b9;
   opacity: 1;
   font-size: 12px;
 }
@@ -30,28 +32,25 @@ a {
 .form-control {
   font-size: 14px;
   line-height: 1;
-  color: #411530;
+  border-color: #4115301c;
 }
 
 #city {
-  color: #411530;
+  color: #d36b00;
   text-align: right;
   font-size: 28px;
 }
 #temperature {
-  color: #d36b00;
+  color: #411530;
   font-size: 28px;
   text-align: right;
 }
 #units {
-  color: #d36b00;
+  color: #411530;
   font-size: 15px;
   text-align: left;
 }
 
-#min-max {
-  color: red;
-}
 .pad {
   padding: 0;
 }
@@ -71,7 +70,6 @@ a {
 .forecast {
   text-align: center;
   padding: 0 10px;
-  color: #5a6275;
   border-left: 1px solid #e6d2aa;
 }
 .forecast:first-child {
@@ -92,10 +90,10 @@ a {
 
 .check {
   border-radius: 8px;
-  border: 1px solid #f1efdc;
-  color: white;
+  border: 1px solid #41153004;
+  color: #f1efdc;
   font-size: 13px;
-  background: #f1efdc;
+  background: #4115304a;
 
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
   transition: all 200ms ease-in-out;
@@ -103,16 +101,15 @@ a {
 }
 
 .check:hover {
-  background: white;
-  color: #f1efdc;
+  background: #f1efdc87;
+  color: #4115304a;
 }
 
 .location {
   border-radius: 8px;
-  border: 1px solid #f1efdc;
-  color: white;
+  border: 1px solid #41153004;
   font-size: 13px;
-  background: #f1efdc;
+  background: #4115304a;
 
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
   transition: all 200ms ease-in-out;
@@ -120,25 +117,17 @@ a {
 }
 
 .location:hover {
-  background: white;
-  color: #f1efdc;
-}
-
-.active {
-  color: #d36b00;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
+  background: #f1efdc87;
 }
 
 .forecast-day {
   font-size: 16px;
-  color: #411530;
+  color: #41153082;
 }
 
 .forecast-temp-max-min {
   font-size: 10px;
-  color: #d36b00;
+  color: #411530;
 }
 
 #icon {
@@ -153,15 +142,22 @@ a {
   max-height: 45px;
 }
 .temperature-min {
-  color: #d36900ad;
+  color: #41153082;
 }
 #description {
   display: block;
   text-align: right;
-  color: #d36900ad;
+  color: #41153082;
   font-size: 12px;
   padding: 0;
 }
 #description:first-letter {
   text-transform: uppercase;
+}
+#min {
+  color: #41153082;
+}
+
+a {
+  color: #411530;
 }
